@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Доступ до файлів для .lki пакетів та файлового менеджера -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <!-- Для фізичної миші та введення -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- Мережа — опціонально для серверного підключення -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Noxis OS"
+        android:theme="@style/Theme.NoxisOS"
+        android:hardwareAccelerated="true"
+        android:largeHeap="true">
+
+        <!-- Головна активність — робочий стіл -->
+        <activity
+            android:name=".ui.desktop.DesktopActivity"
+            android:exported="true"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:windowSoftInputMode="adjustNothing"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Активність для встановлення .lki пакетів -->
+        <activity
+            android:name=".system.lki.LkiInstallerActivity"
+            android:exported="true"
+            android:theme="@style/Theme.NoxisOS.Dialog">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="*/*" />
+                <data android:pathPattern=".*\\.lki" />
+            </intent-filter>
+        </activity>
+
+        <!-- Активність налаштувань -->
+        <activity
+            android:name=".ui.apps.SettingsActivity"
+            android:exported="false" />
+
+        <!-- Активність файлового менеджера -->
+        <activity
+            android:name=".ui.apps.FileManagerActivity"
+            android:exported="false" />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Noxis OS</string>
+    <string name="install_app">Встановити застосунок</string>
+    <string name="uninstall_app">Видалити</string>
+    <string name="settings">Налаштування</string>
+    <string name="file_manager">Файловий менеджер</string>
+    <string name="install_confirm">Встановити \"%s\"?</string>
+    <string name="install_success">Встановлено успішно</string>
+    <string name="install_error">Помилка встановлення</string>
+    <string name="version">Версія: %s</string>
+    <string name="author">Автор: %s</string>
+    <string name="invalid_package">Невалідний пакет .lki</string>
+    <string name="cancel">Скасувати</string>
+    <string name="install">Встановити</string>
+    <string name="ok">OK</string>
+</resources>

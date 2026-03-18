@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Фони -->
+    <color name="desktop_bg">#0D0D0F</color>
+    <color name="window_bg">#1A1A1F</color>
+    <color name="window_titlebar">#141417</color>
+    <color name="taskbar_bg">#0F0F12</color>
+    <color name="transparent">#00000000</color>
+
+    <!-- Акценти -->
+    <color name="noxis_accent">#7B5EA7</color>
+    <color name="noxis_accent_light">#9D7EC7</color>
+    <color name="noxis_accent_dim">#3D2F54</color>
+
+    <!-- Текст -->
+    <color name="text_primary">#F0F0F5</color>
+    <color name="text_secondary">#8A8A9A</color>
+    <color name="text_accent">#C8AAFF</color>
+
+    <!-- Вікно -->
+    <color name="window_border">#2A2A35</color>
+    <color name="window_border_active">#7B5EA7</color>
+    <color name="window_close">#FF5F57</color>
+    <color name="window_minimize">#FFBD2E</color>
+    <color name="window_maximize">#28C840</color>
+
+    <!-- Сітка (невидима, але для розрахунків) -->
+    <color name="grid_debug">#1A7B5EA7</color>
+
+    <!-- Курсор -->
+    <color name="cursor_color">#FFFFFF</color>
+    <color name="cursor_shadow">#80000000</color>
+</resources>
