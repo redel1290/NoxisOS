@@ -93,9 +93,9 @@ class LuaRuntime(private val context: Context) {
             override fun call(path: LuaValue): LuaValue {
                 return try {
                     val file = File(app.installDir, path.tojstring())
-                    if (file.exists()) valueOf(file.readText())
-                    else NIL
-                } catch (e: Exception) { NIL }
+                    if (file.exists()) LuaValue.valueOf(file.readText())
+                    else LuaValue.NIL
+                } catch (e: Exception) { LuaValue.NIL }
             }
         })
 
@@ -107,7 +107,7 @@ class LuaRuntime(private val context: Context) {
                     file.parentFile?.mkdirs()
                     file.writeText(data.tojstring())
                     TRUE
-                } catch (e: Exception) { FALSE }
+                } catch (e: Exception) { LuaValue.FALSE }
             }
         })
 
@@ -120,10 +120,10 @@ class LuaRuntime(private val context: Context) {
         })
 
         // noxis.appId
-        api.set("appId", valueOf(app.id))
+        api.set("appId", LuaValue.valueOf(app.id))
 
         // noxis.appDir
-        api.set("appDir", valueOf(app.installDir))
+        api.set("appDir", LuaValue.valueOf(app.installDir))
 
         return api
     }

@@ -128,7 +128,7 @@ class DesktopView(context: Context) : View(context) {
             canvas.drawText(
                 icon.app.name.take(1).uppercase(),
                 x + size / 2,
-                y + size / 2 + textSize * 0.35f,
+                y + size / 2 + labelPaint.textSize * 0.35f,
                 labelPaint
             )
         }
